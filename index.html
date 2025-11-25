@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lista de deseos — Macarena & Francisco</title>
   <meta name="description" content="Lista de deseos de Macarena y Francisco para su matrimonio." />
+
+  <!-- FAVICON -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
   <style>
     :root{
       --bg:#ffffff;
@@ -16,8 +20,10 @@
       --gold:#b99a5a;
       --olive:#7c8b79;
     }
+
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
+
     body{
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color:var(--text);
@@ -27,61 +33,150 @@
         var(--bg);
       background-attachment: fixed;
     }
+
     .container{max-width:1120px;margin:0 auto;padding:0 24px}
-    .hero{padding:72px 0 24px;text-align:center;position:relative}
+    .hero{padding:72px 0 24px;text-align:center}
     .brand{letter-spacing:.22em;text-transform:uppercase;color:var(--olive);font-size:.85rem}
+
     h1{
       font-family: Georgia, 'Times New Roman', serif;
-      font-weight:600; margin:.35rem 0 0;
+      font-weight:600;
+      margin:.35rem 0 0;
       font-size:clamp(2.2rem,4.5vw,3.2rem);
       letter-spacing:.03em;
     }
-    .lead{max-width:66ch;margin:16px auto 0;line-height:1.65;color:var(--muted)}
-    .grid{display:grid;gap:22px;padding:28px 0 8px;grid-template-columns:repeat(1,minmax(0,1fr))}
-    @media (min-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (min-width:1024px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+    .lead{
+      max-width:66ch;
+      margin:16px auto 0;
+      line-height:1.65;
+      color:var(--muted)
+    }
+
+    .grid{
+      display:grid;
+      gap:22px;
+      padding:28px 0 8px;
+      grid-template-columns:repeat(1,minmax(0,1fr))
+    }
+    @media (min-width:640px){
+      .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (min-width:1024px){
+      .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    }
+
     .card{
-      background:#fff;border:1px solid var(--border);border-radius:18px;padding:22px;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:22px;
       box-shadow:0 8px 26px rgba(0,0,0,.06);
       transition:transform .2s ease, box-shadow .2s ease;
-      display:flex;flex-direction:column
+      display:flex;flex-direction:column;
     }
-    .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.08)}
-    .row{display:flex;align-items:center;gap:12px}
+
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 30px rgba(0,0,0,.08);
+    }
+
+    .row{
+      display:flex;
+      align-items:center;
+      gap:12px
+    }
+
     .icon{
-      width:48px;height:48px;border-radius:999px;background:#faf7f0;display:grid;place-items:center;
+      width:48px; height:48px;
+      border-radius:999px;
+      background:#faf7f0;
       border:1px solid #efe6d5;
+      display:grid;
+      place-items:center;
     }
-    .icon svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.6}
-    h3{margin:0;font-size:1.15rem;font-weight:600;letter-spacing:.01em}
+
+    .icon svg{
+      width:26px;
+      height:26px;
+      stroke:var(--gold);
+      fill:none;
+      stroke-width:1.6;
+    }
+
+    h3{
+      margin:0;
+      font-size:1.15rem;
+      font-weight:600;
+      letter-spacing:.01em;
+    }
+
     .desc{color:var(--muted);font-size:.95rem;margin-top:8px}
     .amount{font-size:1.6rem;font-weight:700;margin-top:12px}
-    .btns{margin-top:14px;display:flex;justify-content:center}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      border:1px solid var(--gold);border-radius:14px;
-      padding:12px 24px;background:#fff;color:#6b5b2f;
-      text-decoration:none;transition:.15s transform, .15s background;
-      font-size:.95rem;font-weight:500;
+
+    .btns{
+      margin-top:14px;
+      display:flex;
+      justify-content:center
     }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid var(--gold);
+      border-radius:14px;
+      padding:12px 24px;
+      background:#fff;
+      color:#6b5b2f;
+      text-decoration:none;
+      transition:.15s transform, .15s background;
+      font-size:.95rem;
+      font-weight:500;
+    }
+
     .btn:hover{background:#fff9ec}
     .btn:active{transform:scale(.98)}
+
     .panel{
-      background:#fff;border:1px solid var(--border);border-radius:18px;padding:26px;text-align:center;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:26px;
+      text-align:center;
       box-shadow:0 8px 26px rgba(0,0,0,.06);
     }
-    footer{padding:18px 0 72px;text-align:center;color:var(--muted)}
+
     .divider{
-      width:100%;max-width:560px;height:1px;background:linear-gradient(90deg, transparent, var(--gold), transparent);
-      margin:36px auto 12px;border-radius:999px
+      width:100%;
+      max-width:560px;
+      height:1px;
+      background:linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin:36px auto 12px;
+      border-radius:999px;
     }
+
     .date{
       font-family: Georgia, 'Times New Roman', serif;
-      letter-spacing:.35em;text-transform:uppercase;color:#7c6a39;font-size:.85rem
+      letter-spacing:.35em;
+      text-transform:uppercase;
+      color:#7c6a39;
+      font-size:.85rem;
+      text-align:center;
     }
+
+    footer{
+      padding:18px 0 72px;
+      text-align:center;
+      color:var(--muted)
+    }
+
   </style>
 </head>
+
+
 <body>
+
   <header class="hero">
     <div class="container">
       <div class="brand">Macarena & Francisco</div>
@@ -93,8 +188,13 @@
     </div>
   </header>
 
+
+
   <main class="container">
+
     <section class="grid">
+
+      <!-- Pádel -->
       <article class="card">
         <div class="row">
           <div class="icon"><svg viewBox="0 0 24 24"><path d='M6 15l3 3m9-9l-3-3M5.5 5.5a3.5 3.5 0 015 5L8 13 6 11 10.5 6.5M18.5 18.5a3.5 3.5 0 01-5-5L16 11l2 2-4.5 4.5'/></svg></div>
@@ -107,6 +207,7 @@
         </div>
       </article>
 
+      <!-- Hogar -->
       <article class="card">
         <div class="row">
           <div class="icon"><svg viewBox="0 0 24 24"><path d='M3 11l9-7 9 7M5 10v10h6v-6h2v6h6V10'/></svg></div>
@@ -119,6 +220,7 @@
         </div>
       </article>
 
+      <!-- Luna de miel -->
       <article class="card">
         <div class="row">
           <div class="icon"><svg viewBox="0 0 24 24"><path d='M2 12l20-7-7 20-3-7-7-3zM2 12l7 3'/></svg></div>
@@ -131,6 +233,7 @@
         </div>
       </article>
 
+      <!-- Futuro integrante -->
       <article class="card">
         <div class="row">
           <div class="icon"><svg viewBox="0 0 24 24"><path d='M12 13c2 0 4 1.5 4 3.5S14 20 12 20s-4-1.5-4-3.5S10 13 12 13z'/><path d='M6.5 9c.8 0 1.5-.9 1.5-2s-.7-2-1.5-2S5 5.9 5 7s.7 2 1.5 2zm11 0c.8 0 1.5-.9 1.5-2s-.7-2-1.5-2-1.5.9-1.5 2 .7 2 1.5 2zM9 10c.9 0 1.7-.9 1.7-2s-.8-2-1.7-2S7.3 6.9 7.3 8 8.1 10 9 10zm6 0c.9 0 1.7-.9 1.7-2s-.8-2-1.7-2-1.7.9-1.7 2 .8 2 1.7 2z'/></svg></div>
@@ -142,17 +245,23 @@
           <a class="btn" href="https://fintoc.me/matri-delai-sanchez/300000" target="_blank">Transferir</a>
         </div>
       </article>
+
     </section>
+
 
     <section class="panel" style="margin-top:28px">
       <h2 style="margin:0 0 6px 0; font-family: Georgia, 'Times New Roman', serif;">¿Tienes otra idea de regalo?</h2>
       <p class="lead" style="max-width: 60ch; margin: 8px auto 0;">
         Si prefieres hacernos un regalo distinto o elegir otro monto, puedes usar el botón de transferencia.
       </p>
+
       <p style="margin-top:14px">
-        <a class="btn" href="https://fintoc.me/matri-delai-sanchez" target="_blank">Elegir otro monto (Transferencia)</a>
+        <a class="btn" href="https://fintoc.me/matri-delai-sanchez" target="_blank">
+          Elegir otro monto (Transferencia)
+        </a>
       </p>
     </section>
+
 
     <div class="divider"></div>
     <p class="date">14 · 02 · 2026</p>
@@ -160,6 +269,8 @@
     <footer>
       Gracias por acompañarnos con su cariño. Chapanay, Concón.
     </footer>
+
   </main>
+
 </body>
 </html>
